@@ -50,6 +50,10 @@ export const CardGenerator = () => {
   return <CardDeck>{mapCards()}</CardDeck>;
 };
 
+/**
+ * Generate the application navbar
+ * @return {ReactElement}
+ */
 export class SiteNavbar extends Component {
   constructor(props) {
     super(props);
