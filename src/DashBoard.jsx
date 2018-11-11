@@ -71,9 +71,7 @@ export class SiteNavbar extends Component {
     return (
       <div className="navbar-wrapper">
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">
-            NETWORK NUKE
-          </NavbarBrand>
+          <NavbarBrand href="/">WOLVERINE FUELS: Network Automation Services</NavbarBrand>
           <NavbarToggler onClick={this.handleNavbarDisplay} className="mr-2" />
           <Collapse isOpen={this.state.displaySiteNavbar} navbar>
             <Nav navbar>
@@ -81,9 +79,7 @@ export class SiteNavbar extends Component {
                 <NavLink href="/components/">Wolverine Fuels</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="http://its-gj.com">
-                  ITS
-                </NavLink>
+                <NavLink href="http://its-gj.com">ITS</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -115,13 +111,14 @@ class MineCard extends Component {
       <ModalHeader toggle={this.handleModalDisplay}>
         {this.props.cardData.mineName}
       </ModalHeader>
-      <ModalBody>Modal Body</ModalBody>
+      <ModalBody>Select network service</ModalBody>
       <ModalFooter>
         <Button
+          className="btn-p"
           color="primary"
           onClick={() => console.log("You clicked a button!")}
         >
-          Do Something
+          Playbook 1
         </Button>{" "}
         <Button color="secondary" onClick={this.handleModalDisplay}>
           Cancel
@@ -138,7 +135,9 @@ class MineCard extends Component {
             <this.CardModal />
             <CardTitle>{this.props.cardData.mineName}</CardTitle>
             <CardText>Network Information.</CardText>
-            <Button onClick={this.handleModalDisplay}>View Playbooks</Button>
+            <Button className="card-btn" onClick={this.handleModalDisplay}>
+              View Playbooks
+            </Button>
           </CardBody>
         </Card>
       </div>
