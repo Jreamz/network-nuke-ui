@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import VanillaCode from "./VanillaCode"
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import MineSiteCards, { CardGenerator } from "./DashBoard";
 
 class App extends Component {
   render() {
     return (
-      <VanillaCode />
+      <div>
+        <CardGenerator />
+      </div>
     );
   }
 }
