@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./index.css";
 import {
   Card,
   Button,
@@ -12,7 +13,14 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
 } from "reactstrap";
 
 // Configuration for each mine site
@@ -42,6 +50,45 @@ export const CardGenerator = () => {
   return <CardDeck>{mapCards()}</CardDeck>;
 };
 
+export class SiteNavbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displaySiteNavbar: false
+    };
+  }
+
+  handleNavbarDisplay = () => {
+    this.setState({ displaySiteNavbar: !this.state.displaySiteNavbar });
+  };
+
+  render() {
+    return (
+      <div className="navbar-wrapper">
+        <Navbar color="faded" light>
+          <NavbarBrand href="/" className="mr-auto">
+            NETWORK NUKE
+          </NavbarBrand>
+          <NavbarToggler onClick={this.handleNavbarDisplay} className="mr-2" />
+          <Collapse isOpen={this.state.displaySiteNavbar} navbar>
+            <Nav navbar>
+              <NavItem>
+                <NavLink href="/components/">Wolverine Fuels</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
+                  ITS
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}
+
 /**
  * An individual card
  * @return {ReactElement}
@@ -61,7 +108,9 @@ class MineCard extends Component {
 
   CardModal = () => (
     <Modal isOpen={this.state.displayModal} toggle={this.handleModalDisplay}>
-      <ModalHeader toggle={this.handleModalDisplay}>{this.props.cardData.mineName}</ModalHeader>
+      <ModalHeader toggle={this.handleModalDisplay}>
+        {this.props.cardData.mineName}
+      </ModalHeader>
       <ModalBody>Modal Body</ModalBody>
       <ModalFooter>
         <Button
@@ -79,7 +128,7 @@ class MineCard extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-wrapper">
         <Card>
           <CardBody>
             <this.CardModal />

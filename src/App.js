@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import MineSiteCards, { CardGenerator } from "./DashBoard";
+import { CardGenerator, SiteNavbar } from "./DashBoard";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <CardGenerator />
+        <SiteNavbar />
+        <div className="dashboard-container">
+          <CardGenerator />
+        </div>
       </div>
     );
   }
