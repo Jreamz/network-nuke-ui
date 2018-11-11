@@ -81,7 +81,7 @@ export class SiteNavbar extends Component {
                 <NavLink href="/components/">Wolverine Fuels</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink href="http://its-gj.com">
                   ITS
                 </NavLink>
               </NavItem>
