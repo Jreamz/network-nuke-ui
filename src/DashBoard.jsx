@@ -61,7 +61,7 @@ export class SiteNavbar extends Component {
     return (
       <div className="navbar-wrapper">
         <Navbar color="faded" light>
-          <NavbarBrand href="/">WOLVERINE FUELS: Network Automation Services</NavbarBrand>
+          <NavbarBrand href="/">Network Automation Services</NavbarBrand>
           <NavbarToggler onClick={this.handleNavbarDisplay} className="mr-2" />
           <Collapse isOpen={this.state.displaySiteNavbar} navbar>
             <Nav navbar>
