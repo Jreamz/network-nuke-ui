@@ -25,17 +25,7 @@ import {
 
 // Configuration for each mine site
 const cardConfig = [
-  { mineName: "BM2" },
-  { mineName: "KY" },
-  { mineName: "DUG" },
-  { mineName: "GJO" },
-  { mineName: "KY" },
-  { mineName: "NOC" },
-  { mineName: "SAL" },
-  { mineName: "SKY" },
-  { mineName: "SLC" },
-  { mineName: "SUF" },
-  { mineName: "TLS" }
+  { mineName: "TEST" },
 ];
 
 /**
